@@ -323,7 +323,7 @@ export const ExpertiseDual: React.FC<ExpertiseDualProps> = ({ onSelectService })
                       onClick={() => onSelectService('Plomberie d’Urgence 24/7')}
                       className="inline-flex items-center gap-2 text-xs font-semibold text-[#8C6218] hover:text-[#5C410F] transition-colors cursor-pointer"
                     >
-                      <span>Contacter sur WhatsApp</span>
+                      <span>Devis</span>
                       <ArrowRight className="w-3.5 h-3.5" />
                     </button>
                   </div>

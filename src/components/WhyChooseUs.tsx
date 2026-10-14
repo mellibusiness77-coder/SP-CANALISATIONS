@@ -101,7 +101,7 @@ export const WhyChooseUs: React.FC<WhyChooseUsProps> = ({ onOpenWhatsApp }) => {
                 className="flex items-center gap-2.5 px-6 py-3.5 rounded-xl text-xs font-semibold text-white bg-gold-gradient hover:opacity-95 shadow-md gold-shadow transition-all cursor-pointer"
               >
                 <MessageCircle className="w-4 h-4 text-white" />
-                <span>Échanger avec notre Équipe sur WhatsApp</span>
+                <span>Devis</span>
               </button>
               <span className="text-xs text-[#78716C]">
                 Réponse instantanée 24/7 par nos techniciens qualifiés

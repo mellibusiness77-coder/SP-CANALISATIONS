@@ -266,7 +266,7 @@ export const WhatsAppContactForm: React.FC<WhatsAppContactFormProps> = ({ initia
                   className="w-full flex items-center justify-center gap-3 py-4 px-6 rounded-xl text-sm font-semibold uppercase tracking-wider text-white bg-gold-gradient bg-gold-gradient-hover shadow-lg gold-shadow-hover transition-all cursor-pointer"
                 >
                   <MessageCircle className="w-5 h-5 text-white" />
-                  <span>Envoyer la demande sur WhatsApp</span>
+                  <span>Envoyer le devis</span>
                 </button>
               </div>
 
@@ -277,38 +277,8 @@ export const WhatsAppContactForm: React.FC<WhatsAppContactFormProps> = ({ initia
             </form>
           </div>
 
-          {/* Column 2: Direct Assistance & Emergency Hotline */}
+          {/* Column 2: Availability & Guarantees */}
           <div className="lg:col-span-5 space-y-6">
-            {/* Direct WhatsApp Callout */}
-            <div className="bg-white rounded-3xl p-6 sm:p-8 border border-[#E8E2D5] shadow-sm">
-              <div className="flex items-start gap-4 mb-5">
-                <div className="w-12 h-12 rounded-2xl bg-[#25D366]/10 border border-[#25D366]/30 flex items-center justify-center shrink-0">
-                  <MessageCircle className="w-6 h-6 text-[#25D366]" />
-                </div>
-                <div>
-                  <span className="text-xs uppercase tracking-wider text-[#2E7D32] font-bold">
-                    Échange Direct WhatsApp
-                  </span>
-                  <h4 className="font-luxury text-xl font-bold text-[#1C1917] mt-0.5 mb-1">
-                    Contact Instantané 24/7
-                  </h4>
-                  <p className="text-xs text-[#57534E] font-light leading-relaxed">
-                    Besoin d&apos;envoyer une photo de votre installation ou d&apos;une réponse immédiate ? Ouvrez directement une discussion avec nos techniciens.
-                  </p>
-                </div>
-              </div>
-
-              <a
-                href="https://wa.me/33699382519"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full flex items-center justify-center gap-2.5 py-3.5 px-4 rounded-xl text-xs font-semibold text-white bg-[#25D366] hover:bg-[#20ba5a] shadow-sm transition-all"
-              >
-                <MessageCircle className="w-4 h-4 text-white" />
-                <span>Écrire sur WhatsApp : 06 99 38 25 19</span>
-              </a>
-            </div>
-
             {/* Availability & Emergency Information Card */}
             <div className="bg-white rounded-3xl p-6 sm:p-8 border border-[#E8E2D5] shadow-sm">
               <div className="flex items-start gap-4">

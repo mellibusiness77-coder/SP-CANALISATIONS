@@ -4,7 +4,6 @@ import {
   Zap, 
   ArrowDown, 
   CheckCircle2, 
-  MessageCircle, 
   Clock, 
   Sparkles, 
   Maximize2, 
@@ -102,24 +101,14 @@ export const Hero: React.FC<HeroProps> = ({ onOpenWhatsApp }) => {
             Hydrocurage haute pression 400 bars, inspection caméra vidéo HD et interventions d&apos;urgence pour particuliers, syndics et entreprises.
           </p>
 
-          {/* Centered Action Buttons */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 w-full sm:w-auto">
+          {/* Centered Action Button */}
+          <div className="flex items-center justify-center mt-2">
             <a
-              href="https://wa.me/33699382519"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full sm:w-auto flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-xl text-sm font-semibold tracking-wide text-white bg-[#25D366] hover:bg-[#20ba5a] shadow-xl hover:scale-105 transition-all"
-            >
-              <MessageCircle className="w-4 h-4 text-white" />
-              <span>WhatsApp : 06 99 38 25 19</span>
-            </a>
-
-            <a
-              href="#assainissement"
-              className="w-full sm:w-auto flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl text-sm font-medium text-white bg-black/40 hover:bg-black/60 backdrop-blur-md border border-[#D4AF37]/50 shadow-lg transition-all"
+              href="#expertises"
+              className="flex items-center justify-center gap-2.5 px-8 py-4 rounded-xl text-sm font-semibold text-white bg-gold-gradient bg-gold-gradient-hover shadow-xl gold-shadow-hover transition-all hover:scale-105 cursor-pointer"
             >
               <span>Découvrir nos prestations</span>
-              <ArrowDown className="w-4 h-4 text-[#D4AF37]" />
+              <ArrowDown className="w-4 h-4 text-white" />
             </a>
           </div>
 
