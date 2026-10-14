@@ -1,0 +1,6 @@
+{
+  "name": "SP CANALISATIONS - Assainissement & Plomberie d'Excellence",
+  "description": "Entreprise spécialisée en Assainissement et Plomberie de prestige : débouchage haute pression, curage, inspection caméra et dépannage 24/7 en Île-de-France.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

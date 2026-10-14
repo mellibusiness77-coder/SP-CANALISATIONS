@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    color: #1c1917;
+  }
+  
+  h1, h2, h3, .font-luxury {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+
+  .font-brand {
+    font-family: 'Cinzel', serif;
+  }
+}
+
+.text-gold-gradient {
+  background: linear-gradient(135deg, #8c6218 0%, #c89e37 35%, #e3c467 60%, #9d711c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gold-bright {
+  background: linear-gradient(135deg, #a67c1e 0%, #d4af37 45%, #f3e5ab 70%, #b38728 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bg-gold-gradient {
+  background: linear-gradient(135deg, #b8860b 0%, #d4af37 50%, #996515 100%);
+}
+
+.bg-gold-gradient-hover:hover {
+  background: linear-gradient(135deg, #c89410 0%, #dfbc48 50%, #aa7219 100%);
+}
+
+.bg-gold-subtle {
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.09) 0%, rgba(212, 175, 55, 0.02) 100%);
+}
+
+.border-gold-subtle {
+  border-color: rgba(212, 175, 55, 0.32);
+}
+
+.gold-shadow {
+  box-shadow: 0 12px 32px -8px rgba(180, 140, 50, 0.22);
+}
+
+.gold-shadow-hover {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.gold-shadow-hover:hover {
+  box-shadow: 0 18px 40px -6px rgba(180, 140, 50, 0.32);
+  transform: translateY(-2px);
+}
