@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Header } from './components/Header';
 import { Hero } from './components/Hero';
 import { ExpertiseDual } from './components/ExpertiseDual';
-import { EquipmentTeletransmission } from './components/EquipmentTeletransmission';
 import { WhyChooseUs } from './components/WhyChooseUs';
 import { WhatsAppContactForm } from './components/WhatsAppContactForm';
 import { Footer } from './components/Footer';
@@ -40,9 +39,6 @@ export default function App() {
 
         {/* 2 Main Activities: Assainissement & Plomberie */}
         <ExpertiseDual onSelectService={handleSelectService} />
-
-        {/* Signature Advantage: Télé-transmission immédiate des comptes rendus */}
-        <EquipmentTeletransmission />
 
         {/* Why Choose Us with exact presentation brief text */}
         <WhyChooseUs onOpenWhatsApp={handleOpenWhatsApp} />

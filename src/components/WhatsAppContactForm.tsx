@@ -2,14 +2,12 @@ import React, { useState } from 'react';
 import { 
   MessageCircle, 
   Send, 
-  Copy, 
-  Check, 
   PhoneCall, 
   Sparkles, 
   Clock, 
   MapPin, 
   User, 
-  AlertTriangle 
+  ShieldCheck
 } from 'lucide-react';
 
 interface WhatsAppContactFormProps {
@@ -28,7 +26,6 @@ export const WhatsAppContactForm: React.FC<WhatsAppContactFormProps> = ({ initia
   const [phone, setPhone] = useState<string>('');
   const [location, setLocation] = useState<string>('');
   const [message, setMessage] = useState<string>('');
-  const [copied, setCopied] = useState<boolean>(false);
   const [formSubmitted, setFormSubmitted] = useState<boolean>(false);
 
   // Suggested services by pole
@@ -78,8 +75,7 @@ export const WhatsAppContactForm: React.FC<WhatsAppContactFormProps> = ({ initia
     return lines.join('\n');
   };
 
-  // Official contact number for WhatsApp: format 33189712040 / 33600000000
-  const WHATSAPP_NUMBER = '33189712040';
+  const WHATSAPP_NUMBER = '33699382519';
 
   const handleSendWhatsApp = (e: React.FormEvent) => {
     e.preventDefault();
@@ -87,12 +83,6 @@ export const WhatsAppContactForm: React.FC<WhatsAppContactFormProps> = ({ initia
     const text = encodeURIComponent(generateWhatsAppMessage());
     const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${text}`;
     window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
-  };
-
-  const handleCopyMessage = () => {
-    navigator.clipboard.writeText(generateWhatsAppMessage());
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2500);
   };
 
   return (
@@ -258,7 +248,7 @@ export const WhatsAppContactForm: React.FC<WhatsAppContactFormProps> = ({ initia
               {/* Additional message / precision */}
               <div>
                 <label className="block text-xs uppercase tracking-wider text-[#78716C] font-semibold mb-2">
-                  Précisions sur la situation (Optionnel)
+                  Précisions sur la situation
                 </label>
                 <textarea
                   rows={3}
@@ -287,80 +277,54 @@ export const WhatsAppContactForm: React.FC<WhatsAppContactFormProps> = ({ initia
             </form>
           </div>
 
-          {/* Column 2: Live WhatsApp Message Simulator & Quick Access */}
+          {/* Column 2: Direct Assistance & Emergency Hotline */}
           <div className="lg:col-span-5 space-y-6">
-            {/* WhatsApp Card Simulator */}
-            <div className="bg-[#EFEAE2] rounded-3xl p-6 sm:p-8 border border-[#DFD8CC] shadow-sm relative overflow-hidden">
-              <div className="flex items-center justify-between pb-4 mb-4 border-b border-[#D8D0C2]">
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-[#25D366] flex items-center justify-center text-white font-bold shadow-xs">
-                    <MessageCircle className="w-5 h-5 text-white" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-sm text-[#1C1917]">
-                      SP CANALISATIONS Support
-                    </h4>
-                    <p className="text-[11px] text-[#2E7D32] font-medium flex items-center gap-1">
-                      <span className="w-2 h-2 rounded-full bg-[#25D366]" />
-                      En ligne · Astreinte 24h/24
-                    </p>
-                  </div>
+            {/* Direct WhatsApp Callout */}
+            <div className="bg-white rounded-3xl p-6 sm:p-8 border border-[#E8E2D5] shadow-sm">
+              <div className="flex items-start gap-4 mb-5">
+                <div className="w-12 h-12 rounded-2xl bg-[#25D366]/10 border border-[#25D366]/30 flex items-center justify-center shrink-0">
+                  <MessageCircle className="w-6 h-6 text-[#25D366]" />
                 </div>
-
-                <button
-                  type="button"
-                  onClick={handleCopyMessage}
-                  className="p-2 rounded-lg bg-white/80 hover:bg-white text-stone-700 text-xs flex items-center gap-1.5 transition-colors cursor-pointer border border-stone-200"
-                  title="Copier le texte"
-                >
-                  {copied ? (
-                    <>
-                      <Check className="w-3.5 h-3.5 text-emerald-600" />
-                      <span className="text-[11px] font-medium text-emerald-600">Copié</span>
-                    </>
-                  ) : (
-                    <>
-                      <Copy className="w-3.5 h-3.5 text-stone-500" />
-                      <span className="text-[11px] font-medium">Copier</span>
-                    </>
-                  )}
-                </button>
+                <div>
+                  <span className="text-xs uppercase tracking-wider text-[#2E7D32] font-bold">
+                    Échange Direct WhatsApp
+                  </span>
+                  <h4 className="font-luxury text-xl font-bold text-[#1C1917] mt-0.5 mb-1">
+                    Contact Instantané 24/7
+                  </h4>
+                  <p className="text-xs text-[#57534E] font-light leading-relaxed">
+                    Besoin d&apos;envoyer une photo de votre installation ou d&apos;une réponse immédiate ? Ouvrez directement une discussion avec nos techniciens.
+                  </p>
+                </div>
               </div>
 
-              {/* Chat bubble simulator */}
-              <div className="bg-white rounded-2xl rounded-tl-sm p-4 text-xs font-mono text-[#292524] shadow-xs leading-relaxed whitespace-pre-wrap border border-stone-200">
-                {generateWhatsAppMessage()}
-              </div>
-
-              <div className="mt-4 text-[11px] text-stone-500 text-right">
-                Aperçu en temps réel du message généré
-              </div>
+              <a
+                href="https://wa.me/33699382519"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full flex items-center justify-center gap-2.5 py-3.5 px-4 rounded-xl text-xs font-semibold text-white bg-[#25D366] hover:bg-[#20ba5a] shadow-sm transition-all"
+              >
+                <MessageCircle className="w-4 h-4 text-white" />
+                <span>Écrire sur WhatsApp : 06 99 38 25 19</span>
+              </a>
             </div>
 
-            {/* Emergency Hotline Direct Call Card */}
+            {/* Availability & Emergency Information Card */}
             <div className="bg-white rounded-3xl p-6 sm:p-8 border border-[#E8E2D5] shadow-sm">
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 rounded-2xl bg-[#FAF7EE] border border-[#D4AF37]/40 flex items-center justify-center shrink-0">
-                  <PhoneCall className="w-6 h-6 text-[#B38728]" />
+                  <Clock className="w-6 h-6 text-[#B38728]" />
                 </div>
                 <div>
                   <span className="text-xs uppercase tracking-wider text-[#8C6218] font-bold">
-                    Ligne Téléphonique Directe
+                    Permanence & Disponibilité
                   </span>
                   <h4 className="font-luxury text-xl font-bold text-[#1C1917] mt-0.5 mb-1">
-                    Besoin d&apos;un technicien au téléphone ?
+                    Disponible 24H/24 & 7J/7
                   </h4>
-                  <p className="text-xs text-[#57534E] font-light mb-4">
-                    Pour les situations d&apos;inondation critique ou intervention sous astreinte de nuit, composez immédiatement notre numéro dédié.
+                  <p className="text-xs text-[#57534E] font-light leading-relaxed">
+                    Notre équipe d&apos;astreinte est mobilisée sans interruption pour répondre à toutes vos urgences et demandes d&apos;assainissement et de plomberie.
                   </p>
-
-                  <a
-                    href="tel:0189712040"
-                    className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-[#FAF9F5] hover:bg-[#F4EFE2] border border-[#D4AF37]/50 text-sm font-bold text-[#8C6218] transition-colors"
-                  >
-                    <PhoneCall className="w-4 h-4 text-[#B38728]" />
-                    <span>01 89 71 20 40</span>
-                  </a>
                 </div>
               </div>
             </div>
@@ -369,7 +333,7 @@ export const WhatsAppContactForm: React.FC<WhatsAppContactFormProps> = ({ initia
             <div className="p-4 rounded-2xl bg-[#FAF9F5] border border-[#E5E0D2] flex items-center gap-3 text-xs text-[#57534E]">
               <Sparkles className="w-4 h-4 text-[#B38728] shrink-0" />
               <span>
-                Télé-transmission immédiate des vidéos et comptes rendus après intervention.
+                Interventions d&apos;urgence sur l&apos;ensemble de Paris et l&apos;Île-de-France.
               </span>
             </div>
           </div>

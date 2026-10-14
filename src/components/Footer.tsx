@@ -1,6 +1,6 @@
 import React from 'react';
 import { Logo } from './Logo';
-import { Phone, MessageCircle, Mail, MapPin, Clock, ShieldCheck } from 'lucide-react';
+import { MessageCircle, Mail, MapPin, Clock, ShieldCheck } from 'lucide-react';
 
 interface FooterProps {
   onOpenWhatsApp: (subject?: string) => void;
@@ -104,19 +104,15 @@ export const Footer: React.FC<FooterProps> = ({ onOpenWhatsApp }) => {
                 <span className="text-[#EDE8D0] font-semibold">24H/24 & 7J/7 sans interruption</span>
               </div>
               <div className="flex items-center gap-2">
-                <Phone className="w-4 h-4 text-[#D4AF37] shrink-0" />
-                <a href="tel:0189712040" className="hover:text-[#D4AF37] text-white font-semibold">
-                  01 89 71 20 40
-                </a>
-              </div>
-              <div className="flex items-center gap-2">
                 <MessageCircle className="w-4 h-4 text-[#25D366] shrink-0" />
-                <button
-                  onClick={() => onOpenWhatsApp('Contact Footer')}
-                  className="hover:text-[#25D366] transition-colors cursor-pointer text-left"
+                <a
+                  href="https://wa.me/33699382519"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-[#25D366] text-[#FAF7EE] font-medium transition-colors"
                 >
-                  WhatsApp Direct Disponible
-                </button>
+                  WhatsApp 24/7 : 06 99 38 25 19
+                </a>
               </div>
               <div className="flex items-start gap-2 pt-1">
                 <MapPin className="w-4 h-4 text-[#D4AF37] shrink-0 mt-0.5" />

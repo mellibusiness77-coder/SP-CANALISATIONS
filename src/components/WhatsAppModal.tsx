@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { X, MessageCircle, Phone, Clock, Send, ShieldCheck } from 'lucide-react';
+import { X, MessageCircle, Clock, Send, ShieldCheck } from 'lucide-react';
 
 interface WhatsAppModalProps {
   isOpen: boolean;
@@ -27,7 +27,7 @@ export const WhatsAppModal: React.FC<WhatsAppModalProps> = ({
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const message = `Bonjour SP CANALISATIONS,\nJe vous contacte concernant : ${need}.\n${name ? `Nom : ${name}\n` : ''}${city ? `Ville : ${city}\n` : ''}Merci de me recontacter rapidement.`;
-    const url = `https://wa.me/33189712040?text=${encodeURIComponent(message)}`;
+    const url = `https://wa.me/33699382519?text=${encodeURIComponent(message)}`;
     window.open(url, '_blank', 'noopener,noreferrer');
     onClose();
   };
@@ -55,7 +55,7 @@ export const WhatsAppModal: React.FC<WhatsAppModalProps> = ({
             </h3>
             <p className="text-xs text-[#2E7D32] font-semibold flex items-center gap-1.5">
               <span className="w-2 h-2 rounded-full bg-[#25D366] animate-pulse" />
-              Astreinte 24h/24 & 7j/7 disponible
+              06 99 38 25 19 · Astreinte 24h/24 & 7j/7
             </p>
           </div>
         </div>
@@ -118,15 +118,17 @@ export const WhatsAppModal: React.FC<WhatsAppModalProps> = ({
 
         <div className="mt-5 pt-4 border-t border-stone-100 flex items-center justify-between text-xs text-stone-500">
           <a
-            href="tel:0189712040"
-            className="flex items-center gap-1.5 text-[#8C6218] font-semibold hover:underline"
+            href="https://wa.me/33699382519"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-1.5 text-[#25D366] font-semibold hover:underline"
           >
-            <Phone className="w-3.5 h-3.5" />
-            <span>Appeler au 01 89 71 20 40</span>
+            <MessageCircle className="w-3.5 h-3.5" />
+            <span>06 99 38 25 19</span>
           </a>
           <span className="flex items-center gap-1 text-stone-400">
             <ShieldCheck className="w-3.5 h-3.5" />
-            Télé-transmission immédiate
+            Service 24h/24 & 7j/7
           </span>
         </div>
       </div>

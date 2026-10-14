@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Logo } from './Logo';
-import { Phone, MessageCircle, Menu, X, ShieldCheck, Clock } from 'lucide-react';
+import { MessageCircle, Menu, X, ShieldCheck, Clock } from 'lucide-react';
 
 interface HeaderProps {
   onOpenWhatsAppModal?: (presetSubject?: string) => void;
@@ -38,19 +38,14 @@ export const Header: React.FC<HeaderProps> = ({ onOpenWhatsAppModal }) => {
 
           <div className="flex items-center gap-4 text-[11px] sm:text-xs">
             <a
-              href="tel:0189712040"
-              className="flex items-center gap-1.5 text-[#FAF7EE] hover:text-[#D4AF37] transition-colors"
-            >
-              <Phone className="w-3.5 h-3.5 text-[#D4AF37]" />
-              <span className="font-semibold tracking-wider">01 89 71 20 40</span>
-            </a>
-            <button
-              onClick={() => onOpenWhatsAppModal?.('Urgence Immédiate')}
-              className="hidden sm:flex items-center gap-1 text-[#25D366] hover:text-white transition-colors cursor-pointer"
+              href="https://wa.me/33699382519"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1.5 text-[#25D366] hover:text-white transition-colors"
             >
               <MessageCircle className="w-3.5 h-3.5" />
-              <span>WhatsApp Direct</span>
-            </button>
+              <span className="font-semibold">WhatsApp 24/7 : 06 99 38 25 19</span>
+            </a>
           </div>
         </div>
       </div>
@@ -184,18 +179,11 @@ export const Header: React.FC<HeaderProps> = ({ onOpenWhatsAppModal }) => {
                   setMobileMenuOpen(false);
                   onOpenWhatsAppModal?.('Urgence Mobile');
                 }}
-                className="w-full flex items-center justify-center gap-2 py-3 rounded-lg text-sm font-semibold text-white bg-gold-gradient shadow-md"
+                className="w-full flex items-center justify-center gap-2 py-3.5 rounded-lg text-sm font-semibold text-white bg-gold-gradient shadow-md"
               >
                 <MessageCircle className="w-4 h-4 text-white" />
-                <span>Ouvrir WhatsApp</span>
+                <span>Ouvrir WhatsApp 24/7</span>
               </button>
-              <a
-                href="tel:0189712040"
-                className="w-full flex items-center justify-center gap-2 py-3 rounded-lg text-sm font-medium text-stone-800 bg-white border border-stone-300"
-              >
-                <Phone className="w-4 h-4 text-[#B38728]" />
-                <span>Appel Direct : 01 89 71 20 40</span>
-              </a>
             </div>
           </div>
         )}
